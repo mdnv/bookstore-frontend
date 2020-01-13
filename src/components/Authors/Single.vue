@@ -21,7 +21,7 @@ export default {
     }
   },
   created () {
-    this.$http.get(`/authors/${this.$route.params.id}`)
+    this.$http.get(`/api/v1/authors/${this.$route.params.id}`)
         .then(request => { this.author = request.data })
         .catch(() => { alert('Something went wrong!') })
   },

@@ -31,7 +31,7 @@ export default {
     }
   },
   created () {
-    this.$http.get(`/authors/${this.author.id}/books`)
+    this.$http.get(`/api/v1/authors/${this.author.id}/books`)
         .then(request => { this.books = request.data })
         .catch(() => { alert('Something went wrong!') })
   },

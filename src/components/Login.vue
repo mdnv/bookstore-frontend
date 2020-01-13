@@ -42,7 +42,7 @@ export default {
       }
     },
     login () {
-      this.$http.post('/auth', { user: this.email, password: this.password })
+      this.$http.post('/api/v1/auth', { user: this.email, password: this.password })
         .then(request => this.loginSuccessful(request))
         .catch(() => this.loginFailed())
     },

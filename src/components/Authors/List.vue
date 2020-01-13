@@ -24,7 +24,7 @@ export default {
     }
   },
   created () {
-    this.$http.get('/authors')
+    this.$http.get('/api/v1/authors')
         .then(request => this.buildAuthorList(request.data))
         .catch(() => { alert('Something went wrong!') })
   },
